@@ -15,12 +15,17 @@
 #' 
 #' Residual tests: Mean zero, Shapiro-Wilk normality test, Levene Test for 
 #' homogeneity of variance, and Run's test for randomness
-#' @examples
-#' analyseNlsResiduals(nls_model)
 #' 
-#' @import tidyverse
-#' @import car
-#' @import DescTools
+#' @export
+#' 
+#' @usage
+#' analyseNlsResiduals(nls)
+#' 
+#' @import dplyr
+#' @importFrom car leveneTest
+#' @importFrom DescTools RunsTest
+#' 
+
 
 # .............................................................................
 # analyseNlsResiduals
@@ -60,7 +65,7 @@ analyseNlsResiduals <- function(nls) {
   par(mfrow = c(1, 1)) 
   
   # Run tests -----------------------------------------------------------------
-  norm <- shapiro.test(resDf$resi)
+  norm <- stats::shapiro.test(resDf$resi)
   levene <- car::leveneTest(resDf$resi ~ sign, data = resDf)
   runs <- DescTools::RunsTest(resDf$resi)
   result <- list(normality = norm, levene = levene, runs = runs)
