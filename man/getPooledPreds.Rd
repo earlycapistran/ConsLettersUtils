@@ -19,5 +19,4 @@ from MICE.
 }
 \examples{
 getPooledPreds(my_mira_object)
-
 }

@@ -22,6 +22,3 @@ by linearizing the exponential model to
 and transforming parameter 'a'. Values generated with this function
 may not be apropriate for other nonlinear models.
 }
-\examples{
-getExpStartVal(x_variable, y_variable)
-}

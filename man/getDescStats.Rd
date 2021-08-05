@@ -10,7 +10,7 @@ getDescStats(data, variable)
 \arguments{
 \item{data}{A data frame}
 
-\item{variable}{A column with the variable of interest}
+\item{variable}{A column with a numerical variable of interest}
 }
 \value{
 A dataframe with descriptive statistics
@@ -20,6 +20,6 @@ Calculates descriptive statistics (mean, median, standard deviation,
 minumum, maximum, and n)
 }
 \examples{
-getDescStats(lek_data, cpue)
+getDescStats(iris, Sepal.Length)
 
 }

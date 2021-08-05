@@ -6,9 +6,6 @@
 \usage{
 as.lm(object, ...)
 }
-\arguments{
-\item{object}{An nls object}
-}
 \description{
 Generates a gradient of predicted values from an nls model
 to match formatting for lm models. 

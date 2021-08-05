@@ -27,6 +27,3 @@ of growth and t is elapsed time.
 This equation is solved for 'r' such that: 
 r = ln(N/N0) / t
 }
-\examples{
-getGrowthRate(lek_data, 1952, 1982)
-}
