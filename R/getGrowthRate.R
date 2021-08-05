@@ -26,6 +26,7 @@
 #' getGrowthRate(data, start_year, end_year)
 
 getGrowthRate <- function(data, start_year, end_year) {
+  time <- NULL
   colnames(data) <- c("time", "y")
   # Get rows with start and end values
   start_value <- subset(data, time == start_year)$y 

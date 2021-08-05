@@ -20,6 +20,7 @@
 #' @importFrom stats nls
 #' @importFrom stats var
 #' @importFrom stats deviance
+#' @importFrom stats coef
 
 getNlsR2 <- function(nls) {
   if (class(nls) != "nls") 

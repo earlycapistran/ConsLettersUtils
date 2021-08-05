@@ -30,6 +30,8 @@
 #' @importFrom stats shapiro.test
 #' @importFrom stats residuals
 #' @importFrom stats predict
+#' @importFrom stats qqnorm
+#' @importFrom stats qqline
 
 # To run this function, you must have 'car' installed
 poolResiduals  <- function(mira) { 

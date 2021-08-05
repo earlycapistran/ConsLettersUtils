@@ -22,7 +22,3 @@ Prints predicted and observed value at time 'n'
 \description{
 The predicted value is then compared to the observed value for time 'n'
 }
-\examples{
-getRateComp(data = cpue, start_year = 1952, end_year = 1982)
-
-}

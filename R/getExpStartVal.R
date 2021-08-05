@@ -20,7 +20,8 @@
 #' @usage
 #' getExpStartVal(x, y)
 #' 
-#' @import stats
+#' @importFrom stats lm
+#' @importFrom stats coef
 
 getExpStartVal <-  function(x, y) {
   # Assign x and y variables to dataframe columns

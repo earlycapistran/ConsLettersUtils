@@ -29,6 +29,8 @@
 #' @importFrom stats fitted
 #' @importFrom stats shapiro.test
 #' @importFrom stats sd
+#' @importFrom stats qqnorm
+#' @importFrom stats qqline
 
 
 # .............................................................................

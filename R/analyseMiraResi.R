@@ -20,6 +20,8 @@
 #' @importFrom stats shapiro.test
 #' @importFrom stats residuals
 #' @importFrom stats predict
+#' @importFrom stats qqnorm
+#' @importFrom stats qqline
 #' @importFrom car leveneTest
 #' @import graphics
 
