@@ -14,18 +14,18 @@
 #' @examples
 #' analyseMiraResi(pmm_exp)
 #' 
-#' @import mice
+#' @importFrom mice is.mira
 #' @import stats
-#' @import car
+#' @importFrom car leveneTest
 #' @import graphics
 
 # To run this function, you must have 'car' installed
-analyseMiraResi  <- function(object) { 
-  if (!is.mira(object)) 
+analyseMiraResi  <- function(mira) { 
+  if (!is.mira(mira)) 
     stop("The object must have class 'mira'")
-  if ((m <- length(object$analyses)) < 2) 
+  if ((m <- length(mira$analyses)) < 2) 
     stop("At least two imputations are needed for pooling.\n")
-  analyses <- object$analyses
+  analyses <- mira$analyses
   n <- length(analyses)
   for(i in seq_len(n))
   {
