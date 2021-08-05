@@ -10,6 +10,7 @@
 #' @param base_family Base font family
 #' @param base_line_size Base line size
 #' @param base_rect_size Base rect size
+#' @export
 #' 
 #' @import ggplot2
 #' @import grDevices
