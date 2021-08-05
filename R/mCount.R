@@ -19,7 +19,7 @@
 #' @param yName A character string with the column name
 #' of the response variable that will be imputed
 #' @return A list with two items
-#' @examples mcount(my_data, "y_variable")
+#' @usage mCount(data, yName)
 #' 
 #' @import VIM
 

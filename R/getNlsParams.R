@@ -9,8 +9,9 @@
 #'
 #' @param nls An 'nls' model object
 #' @return A list of parameter estimates
-#' @examples 
-#' getNlsParams(nls_model)
+#' @export
+#' @usage 
+#' getNlsParams(nls)
 #' 
 #' @import stats
 

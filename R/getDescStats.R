@@ -18,9 +18,11 @@
 #' getDescStats(iris, Sepal.Length)
 #' 
 #' @import dplyr
+#' @importFrom stats median
+#' @importFrom stats sd
+#' 
 
 getDescStats <- function(data, variable) {
-  require(tidyverse)
   var <- enquo(variable)  
   desc_stats <- data %>% 
     summarize(mean = mean(!!var), 

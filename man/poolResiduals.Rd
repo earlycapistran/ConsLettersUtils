@@ -26,7 +26,3 @@ complete-data models, and provides a normality plot and a plot of residual
 vs. fitted values. It also provides a Shapiro-Wilk normality test, 
 Levene's test for homogeneity of variance, and residual mean.
 }
-\examples{
-analysePooledResi(pmm_exp)
-
-}

@@ -20,10 +20,12 @@
 #' @param yVarName A character string with the name of the response variable in
 #' the 'mids' object
 #' @return A data frame with three columns
-#' @examples 
-#' pivotImp(mice_data, mon_data, "yearSerial", "cpue")
+#' @export
+#' @usage 
+#' pivotImp(mids, data, xVarName, yVarName)
 #' 
-#' @import tidyr
+#' @importFrom tidyr pivot_longer
+#' @import dplyr
 #' @importFrom mice is.mids
  
 # To run this function, you must have 'dplyr' and 'mice' installed
@@ -46,7 +48,9 @@ pivotImp <- function(mids, data, xVarName, yVarName) {
   imp_data <- cbind(imp_data, pred_value)
   # Pivot into one long column with all imputed values
   imp_data = imp_data %>% 
-    tidyr::pivot_longer(-xVarName, names_to =  "imputedDataset", values_to = yVarName)
+    tidyr::pivot_longer(-xVarName, 
+                        names_to =  "imputedDataset", 
+                        values_to = yVarName)
   colnames(imp_data) <- c(xVarName, "imputedDataset", yVarName)
   return(imp_data)
 }

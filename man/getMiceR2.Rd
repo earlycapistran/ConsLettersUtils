@@ -8,10 +8,10 @@
  Adapted from the R^2 calculation from 'easynls' by
  Emmanuel Arnhold: https://rdrr.io/cran/easynls/}
 \usage{
-getMiceR2(m)
+getMiceR2(nls)
 }
 \arguments{
-\item{m}{An object of class 'nls'}
+\item{nls}{An object of class 'nls'}
 }
 \value{
 R^2 value
@@ -22,8 +22,4 @@ Returns a R^2 value for nonlinear least squares (nls)
  not return adjusted R^2.
  Adapted from the R^2 calculation from 'easynls' by
  Emmanuel Arnhold: https://rdrr.io/cran/easynls/
-}
-\examples{
-getMiceR2(lek_model)
-
 }

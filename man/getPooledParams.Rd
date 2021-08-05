@@ -15,7 +15,3 @@ list
 \description{
 Extracts pooled parameter estimates from a 'mipo' object.
 }
-\examples{
-getPooledParams(pmm_pooled)
-
-}

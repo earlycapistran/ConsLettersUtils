@@ -19,7 +19,3 @@ Utility to calculate R^2  values by pooling values from
 multiply imputed repeated analyses. 
 Based on van Buuren (https://rdrr.io/cran/mice/src/R/pool.r.squared.R)
 }
-\examples{
-getPooled(pmm_exp)
-
-}

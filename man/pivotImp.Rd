@@ -28,7 +28,3 @@ indicating to which of the 'm' imputed datasets it belongs. This function is
 useful for time-series data, where predictor variable (time) is 
 complete and response variable values are missing.
 }
-\examples{
-pivotImp(mice_data, mon_data, "yearSerial", "cpue")
-
-}

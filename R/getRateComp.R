@@ -13,9 +13,12 @@
 #' @param end_year A numerical value corresponding to end year
 #' @param rate A numerical value for the rate of change
 #' @return Prints predicted and observed value at time 'n'
-#' @examples getRateComp(data = cpue, start_year = 1952, end_year = 1982)
+#' @export
+#' @usage
+#' getRateComp(data, start_year, end_year, rate)
 
 getRateComp <- function(data, start_year, end_year, rate){
+  year <- NULL
   colnames(data) <- c("year", "y")
   start_value <- subset(data, year == start_year)$y
   obs_end_value <- subset(data, year == end_year)$y

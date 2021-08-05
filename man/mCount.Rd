@@ -24,7 +24,3 @@ Data Imputations? Structural Equation Modeling: A
 Multidisciplinary Journal, 15(4), 651–675. 
 https://doi.org/10.1080/10705510802339072
 }
-\examples{
-mcount(my_data, "y_variable")
-
-}

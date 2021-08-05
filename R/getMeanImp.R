@@ -15,12 +15,18 @@
 #' 'mids' object
 #' @return A data frame with a column for mean response variables grouped by the
 #' corresponding predictor variable value for which they were imputed
+#' @export
 #' 
+#' @usage
+#' getMeanImp(mids, data, xVarName, yVarName)
+#' 
+#' @importFrom tidyr pivot_longer
 #' @import dplyr
 #' @importFrom mice is.mids
 
 # To run this function, you must have 'dplyr' installed
 getMeanImp <- function(mids, data, xVarName, yVarName) {
+  x <- y <- NULL
   if (!is.mids(mids)) 
     stop("The data must have class 'mids'")
   if (!is.character(xVarName)) 
@@ -39,7 +45,7 @@ getMeanImp <- function(mids, data, xVarName, yVarName) {
   imp_data <- cbind(imp_data, pred_value)
   # Pivot data into a long column with all imputed values
   imp_data = imp_data %>% 
-    dplyr::pivot_longer(-xVarName, names_to =  "imputedDataset", values_to = yVarName)
+    tidyr::pivot_longer(-xVarName, names_to =  "imputedDataset", values_to = yVarName)
   colnames(imp_data) <- c("x", "imputedDataset", "y")
   # Group by predictor variable value for which they were imputed
   by_x <- imp_data %>% 

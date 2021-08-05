@@ -19,7 +19,3 @@ Get NLS parameter estimates
 
 Extracts parameter estimates from an 'nls' model object
 }
-\examples{
-getNlsParams(nls_model)
-
-}

@@ -13,8 +13,9 @@
 #' 
 #' @param nls An object of class 'nls'
 #' @return R^2 value and adjusted R^2 value
-#' @examples
-#' getNlsR2(lek_model)
+#' @export
+#' @usage
+#' getNlsR2(nls)
 #' 
 #' @import stats
 

@@ -19,7 +19,3 @@ models.
 Adapted from the cuasi-R^2 calculation from 'easynls' by
 Emmanuel Arnhold: https://rdrr.io/cran/easynls/
 }
-\examples{
-getNlsR2(lek_model)
-
-}

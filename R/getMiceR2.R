@@ -10,17 +10,18 @@
 #'  Adapted from the R^2 calculation from 'easynls' by
 #'  Emmanuel Arnhold: https://rdrr.io/cran/easynls/
 #' 
-#' @param m An object of class 'nls'
+#' @param nls An object of class 'nls'
 #' @return R^2 value
-#' @examples
-#' getMiceR2(lek_model)
+#' @export
+#' @usage
+#' getMiceR2(nls)
 #' 
 #' @import stats
 
-getMiceR2 <- function(m) {
-  gl <- length(fitted(m)) - 1
-  sqt <- var((fitted(m) + resid(m))) * gl
-  r1 <- (sqt - deviance(m))/sqt
+getMiceR2 <- function(nls) {
+  gl <- length(fitted(nls)) - 1
+  sqt <- var((fitted(nls) + resid(nls))) * gl
+  r1 <- (sqt - deviance(nls))/sqt
   r1=round(r1,4)
   return(r1)
 }

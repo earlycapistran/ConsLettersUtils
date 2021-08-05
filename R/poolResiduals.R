@@ -21,10 +21,11 @@
 #' @return Residual plots (normality, residuals vs. fitted values, lag plot)
 #' Shapiro-Wilk normality test, Levene Test for homogeneity of variance, 
 #' Runs test for randomness.
-#' @examples
-#' analysePooledResi(pmm_exp)
+#' @export
+#' @usage
+#' poolResiduals(mira)
 #' 
-#' @import mice
+#' @importFrom mice is.mira
 #' @importFrom car leveneTest
 #' @import stats
 
@@ -59,7 +60,7 @@ poolResiduals  <- function(mira) {
   # Get residual mean
   mean <- mean(resDf$resi)
   # Run tests
-  norm <- shapiro.test(resDf$resi)
+  norm <- stats::shapiro.test(resDf$resi)
   levene <- car::leveneTest(resDf$resi ~ sign,
                        data = resDf)
   result <- list(normality = norm, mean = mean, levene = levene)

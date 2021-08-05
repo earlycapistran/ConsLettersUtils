@@ -18,8 +18,9 @@
 #' variable in the dataframe 'data'
 #' @return A data frame with fitted values, upper and lower bounds, and 
 #' a column with values for predictor variable
-#' @examples 
-#' lek_ci <- getNlsConfInt(lek_model, lek_data, "yearSerial")
+#' @export
+#' @usage
+#' getNlsConfInt(nls, data, xVarName)
 
 getNlsConfInt <- function(nls, data, xVarName) {
     ci_fit <- predict(as.lm.nls(nls), interval = "confidence") 

@@ -25,6 +25,3 @@ function by Walmes Zediani of the Universidade Federal do Paraná
 data frame with upper and lower bounds, fitted values, and values for
 predictor variable to facilitate plotting.
 }
-\examples{
-lek_ci <- getNlsConfInt(lek_model, lek_data, "yearSerial")
-}
