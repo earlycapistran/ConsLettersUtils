@@ -21,10 +21,14 @@
 #' @usage
 #' analyseNlsResiduals(nls)
 #' 
-#' @import dplyr
+#' @importFrom magrittr %>% 
 #' @importFrom car leveneTest
 #' @importFrom DescTools RunsTest
-#' 
+#' @importFrom stats dt
+#' @importFrom stats residuals
+#' @importFrom stats fitted
+#' @importFrom stats shapiro.test
+#' @importFrom stats sd
 
 
 # .............................................................................

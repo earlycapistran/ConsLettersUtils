@@ -21,7 +21,11 @@
 #' getMeanImp(mids, data, xVarName, yVarName)
 #' 
 #' @importFrom tidyr pivot_longer
-#' @import dplyr
+#' @importFrom dplyr filter
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarise
+#' @importFrom dplyr select
+#' @importFrom magrittr %>% 
 #' @importFrom mice is.mids
 
 # To run this function, you must have 'dplyr' installed
@@ -39,20 +43,21 @@ getMeanImp <- function(mids, data, xVarName, yVarName) {
   # Find which values in predictor variable correspond to missing values 
   # for response variable
   pred_value <- data %>% 
-    filter(is.na(data[[yVarName]])) %>% 
-    select(xVarName)
+    dplyr::filter(is.na(data[[yVarName]])) %>% 
+    dplyr::select(xVarName)
   # Bind with corresponding values for predictor variable
   imp_data <- cbind(imp_data, pred_value)
   # Pivot data into a long column with all imputed values
   imp_data = imp_data %>% 
-    tidyr::pivot_longer(-xVarName, names_to =  "imputedDataset", values_to = yVarName)
+    tidyr::pivot_longer(-xVarName, names_to =  "imputedDataset", 
+                        values_to = yVarName)
   colnames(imp_data) <- c("x", "imputedDataset", "y")
   # Group by predictor variable value for which they were imputed
   by_x <- imp_data %>% 
-    group_by(x)
+    dplyr::group_by(x)
   # Calculate mean imputed values for each predictor value
   imp_means = by_x %>% 
-    summarise(impMean = mean(y))
+    dplyr::summarise(impMean = mean(y))
   colnames(imp_means) <- c(xVarName, yVarName)
   return(imp_means)
 } 

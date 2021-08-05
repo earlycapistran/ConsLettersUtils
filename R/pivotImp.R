@@ -25,7 +25,9 @@
 #' pivotImp(mids, data, xVarName, yVarName)
 #' 
 #' @importFrom tidyr pivot_longer
-#' @import dplyr
+#' @importFrom magrittr %>% 
+#' @importFrom dplyr filter
+#' @importFrom dplyr select
 #' @importFrom mice is.mids
  
 # To run this function, you must have 'dplyr' and 'mice' installed
@@ -39,8 +41,8 @@ pivotImp <- function(mids, data, xVarName, yVarName) {
   # Find which values in predictor variable correspond to missing values 
   # for response variable
   pred_value <- data %>% 
-      filter(is.na(data[[yVarName]])) %>% 
-      select(xVarName)
+      dplyr::filter(is.na(data[[yVarName]])) %>% 
+      dplyr::select(xVarName)
   # Store imputed values as a data frame
   imp_data <- mids$imp
   imp_data <- imp_data[[yVarName]]

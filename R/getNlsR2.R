@@ -17,7 +17,9 @@
 #' @usage
 #' getNlsR2(nls)
 #' 
-#' @import stats
+#' @importFrom stats nls
+#' @importFrom stats var
+#' @importFrom stats deviance
 
 getNlsR2 <- function(nls) {
   if (class(nls) != "nls") 

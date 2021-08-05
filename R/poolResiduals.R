@@ -27,7 +27,9 @@
 #' 
 #' @importFrom mice is.mira
 #' @importFrom car leveneTest
-#' @import stats
+#' @importFrom stats shapiro.test
+#' @importFrom stats residuals
+#' @importFrom stats predict
 
 # To run this function, you must have 'car' installed
 poolResiduals  <- function(mira) { 

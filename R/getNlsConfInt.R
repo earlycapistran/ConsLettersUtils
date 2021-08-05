@@ -21,6 +21,9 @@
 #' @export
 #' @usage
 #' getNlsConfInt(nls, data, xVarName)
+#' 
+#' @importFrom stats predict
+#' @importFrom stats nls
 
 getNlsConfInt <- function(nls, data, xVarName) {
     ci_fit <- predict(as.lm.nls(nls), interval = "confidence") 

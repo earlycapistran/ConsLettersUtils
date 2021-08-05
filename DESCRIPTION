@@ -15,11 +15,12 @@ Imports:
     DescTools,
     VIM, 
     proto,
+    dplyr,
     stats,
     graphics, 
-    dplyr,
     broom,
     tidyr,
     ggplot2,
     grDevices,
-    mice
+    mice,
+    magrittr

@@ -17,7 +17,9 @@
 #' analyseMiraResi(mira)
 #' 
 #' @importFrom mice is.mira
-#' @import stats
+#' @importFrom stats shapiro.test
+#' @importFrom stats residuals
+#' @importFrom stats predict
 #' @importFrom car leveneTest
 #' @import graphics
 

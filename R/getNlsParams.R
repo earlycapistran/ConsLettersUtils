@@ -13,7 +13,7 @@
 #' @usage 
 #' getNlsParams(nls)
 #' 
-#' @import stats
+#' @importFrom stats nls
 
 getNlsParams <- function(nls) {
   a <-summary(nls)$parameters[1]

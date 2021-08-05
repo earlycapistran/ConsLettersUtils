@@ -16,7 +16,9 @@
 #' @usage
 #' getMiceR2(nls)
 #' 
-#' @import stats
+#' @importFrom stats fitted
+#' @importFrom stats resid
+#' @importFrom stats deviance
 
 getMiceR2 <- function(nls) {
   gl <- length(fitted(nls)) - 1

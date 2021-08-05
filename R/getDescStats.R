@@ -17,7 +17,9 @@
 #' @examples 
 #' getDescStats(iris, Sepal.Length)
 #' 
-#' @import dplyr
+#' @importFrom dplyr enquo
+#' @importFrom dplyr summarise
+#' @importFrom magrittr %>% 
 #' @importFrom stats median
 #' @importFrom stats sd
 #' 
@@ -25,7 +27,7 @@
 getDescStats <- function(data, variable) {
   var <- enquo(variable)  
   desc_stats <- data %>% 
-    summarize(mean = mean(!!var), 
+    dplyr::summarize(mean = mean(!!var), 
               median = median(!!var),
               sd = sd(!!var), 
               min = min(!!var), 

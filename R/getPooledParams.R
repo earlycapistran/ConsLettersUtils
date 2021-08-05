@@ -13,7 +13,7 @@
 #' @usage
 #' getPooledParams(mipo)
 #' 
-#' @import mice
+#' @importFrom mice is.mipo
 
 getPooledParams <- function(mipo) {
   if (!is.mipo(mipo)) 

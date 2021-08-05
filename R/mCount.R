@@ -22,7 +22,7 @@
 #' @export
 #' @usage mCount(data, yName)
 #' 
-#' @import VIM
+#' @importFrom VIM countNA
 
 mCount <- function(data, yName) {
   if (!is.character(yName)) 

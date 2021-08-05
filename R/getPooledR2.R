@@ -15,7 +15,7 @@
 #' 
 #' @importFrom mice is.mira
 #' @importFrom mice pool.scalar
-#' @import stats
+#' 
 
 getPooledR2 <- function(mira) {
   if (!is.mira(mira)) 
