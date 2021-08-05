@@ -15,8 +15,12 @@
 #' @param x A vector or dataframe column of an independent variable
 #' @param y A vector or dataframe column of a dependent variable
 #' @return list
-#' @examples
-#' getExpStartVal(x_variable, y_variable)
+#' 
+#' @export
+#' @usage
+#' getExpStartVal(x, y)
+#' 
+#' @import stats
 
 getExpStartVal <-  function(x, y) {
   # Assign x and y variables to dataframe columns

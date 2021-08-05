@@ -17,7 +17,7 @@
 #' corresponding predictor variable value for which they were imputed
 #' 
 #' @import dplyr
-#' @import mice
+#' @importFrom mice is.mids
 
 # To run this function, you must have 'dplyr' installed
 getMeanImp <- function(mids, data, xVarName, yVarName) {

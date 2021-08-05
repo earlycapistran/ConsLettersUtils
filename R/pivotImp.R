@@ -24,7 +24,7 @@
 #' pivotImp(mice_data, mon_data, "yearSerial", "cpue")
 #' 
 #' @import tidyr
-#' @import mice
+#' @importFrom mice is.mids
  
 # To run this function, you must have 'dplyr' and 'mice' installed
 pivotImp <- function(mids, data, xVarName, yVarName) {

@@ -7,10 +7,17 @@
 #' minumum, maximum, and n)
 #'
 #' @param data A data frame
-#' @param variable A column with the variable of interest
+#' @param variable A column with a numerical variable of interest
 #' @return A dataframe with descriptive statistics
-#' @examples
-#' getDescStats(lek_data, cpue)
+#' 
+#' @export
+#' @usage
+#' getDescStats(data, variable)
+#' 
+#' @examples 
+#' getDescStats(iris, Sepal.Length)
+#' 
+#' @import dplyr
 
 getDescStats <- function(data, variable) {
   require(tidyverse)
