@@ -11,8 +11,10 @@
 #' @return Residual plots (normality, residuals vs. fitted values, lag plot)
 #' Shapiro-Wilk normality test, Levene Test for homogeneity of variance, 
 #' Runs test for randomness for each of the 'm' repeated complete-data models
-#' @examples
-#' analyseMiraResi(pmm_exp)
+#' 
+#' @export
+#' @usage
+#' analyseMiraResi(mira)
 #' 
 #' @importFrom mice is.mira
 #' @import stats
