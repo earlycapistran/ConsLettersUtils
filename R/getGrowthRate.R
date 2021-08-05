@@ -19,8 +19,11 @@
 #' @param end_year A numerical value corresponding to end year
 #' @return Returns numerical value for annual growth rate. Prints growth rate
 #' as a percentage.
-#' @examples 
-#' getGrowthRate(lek_data, 1952, 1982)
+#' 
+#' @export
+#' 
+#' @usage
+#' getGrowthRate(data, start_year, end_year)
 
 getGrowthRate <- function(data, start_year, end_year) {
   colnames(data) <- c("time", "y")
