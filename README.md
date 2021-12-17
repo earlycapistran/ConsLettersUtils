@@ -1,4 +1,2 @@
-# consLettersUtils
-Utility package for Conservation Letters manuscript
-
-Includes utilities for integrating multiple imputation by chained equations (MICE) with nonlinear regression.
+# miceNls
+Utility package for integrating multiple imputation by chained equations (MICE) with nonlinear regression. 
